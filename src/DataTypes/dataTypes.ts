@@ -8,3 +8,11 @@ let level;  // if we don't initialize the variable then typescript consider it a
 // Arrays 
 let numbers: number[] = []; // if array is not initialized then you must define the type of the array
 numbers[0] = 1;
+
+// Touples : are usefull when have two values like key and value pair
+let details: [number, string]  = [1, "Abhishek"];
+
+// Enum : list of related constants
+const enum Size {Small = 1, Medium, Large};
+let mySize = Size.Large;
+console.log(mySize);
