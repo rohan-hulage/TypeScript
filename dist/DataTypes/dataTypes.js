@@ -27,4 +27,10 @@ function incomeTax(income) {
 console.log("Functions");
 const abhiTax = incomeTax(100000);
 console.log(abhiTax);
+let employee = {
+    id: 1,
+    name: "Abhishek"
+};
+console.log("Objects");
+console.log(employee);
 //# sourceMappingURL=dataTypes.js.map

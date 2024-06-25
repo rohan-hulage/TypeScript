@@ -39,3 +39,15 @@ function incomeTax(income: number): number {
 console.log("Functions");
 const abhiTax = incomeTax(100000);
 console.log(abhiTax);
+
+// Objects : key and value: 
+let employee: {
+    readonly id: number,
+    name: string
+} = {
+    id: 1, 
+    name: "Abhishek"
+}
+
+console.log("Objects");
+console.log(employee);
