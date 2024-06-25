@@ -93,3 +93,35 @@ let voice: Sound = {
 console.log(voice);
 
 
+// Literals 
+type Quality = 50 | 100;
+let quality: Quality = 100;
+
+type Height = 'cm' | 'feet';
+let height: Height = 'cm';
+
+// Nullable types
+function greet(name: string | null | undefined) {
+    if(name){
+        return name.toLocaleUpperCase();
+    }else{
+        return "Hola!";
+    }
+}
+greet(null);
+greet(undefined);
+
+// Optional Chaining
+type Customer = {
+    birthday: Date
+};
+
+function getCustomer(id: number): Customer | null | undefined {
+    return id === 0 ? null : {birthday: new Date()}
+}
+
+let customer = getCustomer(1);
+// optional property access operator
+console.log(customer?.birthday);
+
+

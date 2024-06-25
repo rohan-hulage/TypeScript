@@ -56,4 +56,21 @@ let voice = {
     }
 };
 console.log(voice);
+let quality = 100;
+let height = 'cm';
+function greet(name) {
+    if (name) {
+        return name.toLocaleUpperCase();
+    }
+    else {
+        return "Hola!";
+    }
+}
+greet(null);
+greet(undefined);
+function getCustomer(id) {
+    return id === 0 ? null : { birthday: new Date() };
+}
+let customer = getCustomer(1);
+console.log(customer === null || customer === void 0 ? void 0 : customer.birthday);
 //# sourceMappingURL=dataTypes.js.map
