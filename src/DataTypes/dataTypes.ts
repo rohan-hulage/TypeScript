@@ -41,13 +41,55 @@ const abhiTax = incomeTax(100000);
 console.log(abhiTax);
 
 // Objects : key and value: 
-let employee: {
+// can write function inside the object
+// type aliase : simplified way to use object
+type Employee = {
     readonly id: number,
-    name: string
-} = {
-    id: 1, 
-    name: "Abhishek"
+    name: string,
+    retire: (date: Date) => void
 }
-
+let employee: Employee = {
+    id: 1, 
+    name: "Abhishek",
+    retire: (date: Date) => {
+        console.log(date);
+    }
+}
 console.log("Objects");
 console.log(employee);
+
+// Union types
+function kgToLbs(weight: number | string): number {
+    if(typeof weight === "number"){
+        return weight * 2.2;
+    }else{
+        return parseInt(weight) * 2.4;
+    }
+}
+const w = kgToLbs("5");
+console.log("Union of types");
+console.log(w);
+
+
+// intersection types
+type Cat = {
+    meow: () => void
+}
+
+type Dog = {
+    bark: () => void
+}
+
+type Sound = Cat & Dog;
+let voice: Sound = {
+    meow: () => {
+        console.log("Moew");
+    },
+    bark: () => {
+        console.log("Bark");
+    }
+}
+
+console.log(voice);
+
+

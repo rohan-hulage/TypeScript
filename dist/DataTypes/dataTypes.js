@@ -29,8 +29,31 @@ const abhiTax = incomeTax(100000);
 console.log(abhiTax);
 let employee = {
     id: 1,
-    name: "Abhishek"
+    name: "Abhishek",
+    retire: (date) => {
+        console.log(date);
+    }
 };
 console.log("Objects");
 console.log(employee);
+function kgToLbs(weight) {
+    if (typeof weight === "number") {
+        return weight * 2.2;
+    }
+    else {
+        return parseInt(weight) * 2.4;
+    }
+}
+const w = kgToLbs("5");
+console.log("Union of types");
+console.log(w);
+let voice = {
+    meow: () => {
+        console.log("Moew");
+    },
+    bark: () => {
+        console.log("Bark");
+    }
+};
+console.log(voice);
 //# sourceMappingURL=dataTypes.js.map
